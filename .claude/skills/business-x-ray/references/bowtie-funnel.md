@@ -4,6 +4,26 @@
 
 ---
 
+> **⚠️ CRITICAL: GRID LAYOUT - NOT FLOWCHART**
+>
+> The Bow-Tie Funnel is a **7-COLUMN GRID**, not a flowchart with connected boxes.
+>
+> **CORRECT (Image 1 style):**
+> - 3 phase banners at top: ACQUISITION | COMMIT | DELIVERY
+> - 7 column headers below: AWARENESS | NURTURING | CONSIDERATION | CONVERSION | ONBOARDING | LAUNCH | RESULTS
+> - 3-4 SEPARATE rectangles stacked vertically in EACH column
+> - Small arrows between columns (not connecting individual boxes)
+>
+> **WRONG (flowchart style):**
+> - Single boxes with all text crammed inside
+> - Boxes connected in a linear flow
+> - No phase banners
+> - No column structure
+>
+> **Each activity = its own rectangle.** "YouTube", "Substack", "X/Threads" = 3 separate boxes in the Awareness column.
+
+---
+
 ## Overview
 
 The bow-tie funnel visualizes the complete customer journey:

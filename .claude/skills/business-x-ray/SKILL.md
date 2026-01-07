@@ -200,12 +200,39 @@ Orchestrator (this conversation)
 
 ### Sub-Agent Prompts
 
-**Business Overview (Page 1):**
+**Bow-Tie Funnel (GRID layout - NOT flowchart):**
+```
+Generate Bow-Tie Funnel .drawio with 7-COLUMN GRID structure:
+
+CRITICAL: This is a GRID, not a flowchart. Each activity = separate rectangle.
+
+STRUCTURE:
+Row 1: Title "BOW-TIE FUNNEL: [Business Name]"
+Row 2: 3 phase banners - ACQUISITION (green) | COMMIT (orange) | DELIVERY (green)
+Row 3: 7 column headers - AWARENESS | NURTURING | CONSIDERATION | CONVERSION | ONBOARDING | LAUNCH | RESULTS
+Row 4: Activity boxes - 3-4 SEPARATE rectangles stacked vertically in EACH column
+Row 5: Feedback loop arrow (Results → Awareness)
+
+DATA per column:
+- Awareness: [list items - each gets its own box]
+- Nurturing: [list items]
+- Consideration: [list items]
+- Conversion: [list items + PURCHASE box in blue]
+- Onboarding: [list items]
+- Launch: [list items]
+- Results: [list items]
+
+Read references/bowtie-funnel.md for exact XML patterns and positioning.
+Save to: diagrams/[business-name]-x-ray.drawio
+```
+
+**Business Overview (Page 1 - Bow-Tie + Business Map):**
 ```
 Generate Business Overview .drawio page with:
-- Bow-Tie Funnel (top): [7 stages with data]
+- Bow-Tie Funnel (top): 7-column grid with separate boxes per activity
 - Business Map (bottom): [7 columns with data]
-Read references/drawio-standards.md for XML patterns.
+Read references/bowtie-funnel.md for Bow-Tie XML.
+Read references/drawio-standards.md for Business Map XML.
 Save to: diagrams/[business-name]-x-ray.drawio
 ```
 

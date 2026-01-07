@@ -95,8 +95,24 @@ STOP. Wait for choice.
 ```
 Use the Task tool with subagent_type="general-purpose":
 "Add Bow-Tie Funnel to existing .drawio file.
-Data: [7 stages - Awareness, Nurturing, Consideration, Commit, Onboarding, Launch, Results]
-Read references/drawio-standards.md for XML patterns.
+
+CRITICAL: Generate a 7-COLUMN GRID, NOT a flowchart.
+- Row 1: Title
+- Row 2: 3 phase banners (ACQUISITION | COMMIT | DELIVERY)
+- Row 3: 7 column headers (AWARENESS | NURTURING | etc.)
+- Row 4: 3-4 SEPARATE RECTANGLES stacked vertically in EACH column
+- Each activity = its own box (e.g., 'YouTube', 'Substack', 'X/Threads' = 3 separate boxes)
+
+Data per column:
+- Awareness: [list]
+- Nurturing: [list]
+- Consideration: [list]
+- Conversion: [list + PURCHASE box]
+- Onboarding: [list]
+- Launch: [list]
+- Results: [list]
+
+Read references/bowtie-funnel.md for exact XML patterns.
 File: diagrams/[business-name]-x-ray.drawio"
 ```
 
