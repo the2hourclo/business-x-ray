@@ -4,6 +4,134 @@
 
 ---
 
+## Execution Instructions
+
+**Follow these steps exactly. Do NOT skip steps or combine questions.**
+
+### Step 1: Opening
+Say this EXACTLY:
+> "Let's map your business! I'll make some educated guesses based on what you tell me - just confirm or correct as we go.
+>
+> **What type of business do you run?**"
+
+STOP. Wait for response.
+
+### Step 2: Identify Business Type
+From their response, identify which archetype they match:
+- Coach / Consultant
+- Course Creator
+- Agency
+- SaaS
+- Service Provider
+- Creator / Influencer
+
+### Step 3: Present Pre-Filled Business Map Guess
+Based on archetype, present YOUR GUESS of their business:
+> "Based on what you've told me, here's my initial map:
+>
+> **Business Type:** [Your guess]
+> **Likely Traffic Sources:** [Your guess based on type]
+> **Typical Funnel:** [Your guess based on type]
+> **Team Structure:** [Your guess]
+>
+> How close am I? What should I adjust?"
+
+STOP. Wait for response.
+
+### Step 4: Extract 7 Columns (ONE AT A TIME)
+Go through each column. Ask ONE question, wait for response, then next:
+
+1. **TRAFFIC** → "For a [type], I'm guessing your main traffic is [guess]. That right?"
+2. **CONVERTERS** → "So from [platform], people land on... do you have a lead magnet?"
+3. **PRODUCTS** → "What's your main product right now and its price?"
+4. **FUNNELS** → "Once someone downloads [lead magnet], what happens next?"
+5. **MATH** → "At $X with roughly Y sales/month, that's about $Z. Monthly expenses roughly?"
+6. **TEAM** → "Sounds like you're solo - is that right?"
+7. **GOALS** → "To keep your funnel running, your key actions are: [guess]. That right?"
+
+**CRITICAL:** After EACH question, STOP and wait for their response before asking the next.
+
+### Step 5: Checkpoint - Business Map Complete
+> "Here's your Business Map:
+>
+> [Show summary of all 7 columns]
+>
+> Does this capture your business accurately? Any adjustments?"
+
+STOP. Wait for confirmation.
+
+### Step 6: Infer Bow-Tie Funnel
+From Business Map data, present the 7-stage customer journey:
+> "Based on your Business Map, here's your customer journey:
+>
+> **ACQUISITION:** [Awareness] → [Nurturing] → [Consideration]
+> **COMMIT:** [Conversion moment]
+> **DELIVERY:** [Onboarding] → [Launch] → [Results]
+>
+> How does this look? What's missing?"
+
+STOP. Wait for response.
+
+### Step 7: Checkpoint - Business Overview Complete
+> "Great! Your Business Overview is complete.
+>
+> Now let's map out how things actually work. Which area should we dive into first?
+>
+> A) Lead Generation - How you attract and capture leads
+> B) Sales - How you convert leads to customers
+> C) Fulfillment - How you deliver and get results"
+
+STOP. Wait for choice.
+
+### Step 8: Map Selected Process (Level 1)
+Based on their choice, map the process with actor lanes (Owner | AI | Team | Output).
+
+Present your inference:
+> "Based on what you told me, here's your [Process] flow:
+>
+> **PHASE 1:** [Activity] → Owner
+> **PHASE 2:** [Activity] → AI/System
+> **PHASE 3:** [Activity] → Owner
+> **PHASE 4:** [Activity] → Output
+>
+> Who owns each step? What's missing?"
+
+STOP. Wait for response. Iterate until confirmed.
+
+### Step 9: Probe for Gaps
+If any phase seems incomplete, probe:
+> "You mentioned [X]. But what happens after - [specific gap question]?"
+
+Use the gap detection tables below to know what to probe for.
+
+### Step 10: Pain Discovery (Observe, Don't Ask)
+As you map, listen for pain signals:
+- "I do all of that myself" → Bottleneck
+- "That takes forever" → Time sink
+- "I should do that but don't" → Missing step
+- "I don't have that" → Digital asset needed
+
+After mapping, OBSERVE:
+> "I noticed a few things while we mapped:
+> - [X] and [Y] are all you - those seem like time sinks
+> - [Z] could probably be automated
+>
+> Want to annotate these on the diagram?"
+
+### Step 11: Decision Point
+> "Your [Process] page is done. What's next?
+>
+> A) Map another area - Sales or Fulfillment
+> B) Generate roadmap - Prioritized action plan
+> C) Stop here - Take what we have and start fixing"
+
+STOP. Wait for choice. Loop back to Step 8 if they choose A.
+
+### Step 12: Output Diagram + Resume Block
+Generate the .drawio file (or XML for web users) and provide the resume YAML block.
+
+---
+
 ## Purpose
 
 This workflow guides the progressive extraction of business information, producing:
