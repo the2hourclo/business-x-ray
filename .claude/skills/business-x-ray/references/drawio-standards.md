@@ -251,27 +251,14 @@ Active = Darker color  |  Planned = Lighter color + dashed border
 
 Layout: Bow-Tie funnel on top, 7-column Business Map below
 
-```
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                              BOW-TIE FUNNEL                                  │
-│                                                                              │
-│  [Awareness] → [Nurture] → [Consider] → [COMMIT] → [Onboard] → [Launch] → [Results]  │
-│                                    ↑                                         │
-│                              (the knot)                                      │
-├─────────────────────────────────────────────────────────────────────────────┤
-│                              BUSINESS MAP                                    │
-│                                                                              │
-│  TRAFFIC | CONVERTERS | PRODUCTS | FUNNELS | MATH | TEAM | GOALS            │
-│  --------|------------|----------|---------|------|------|-------           │
-│  Sources | Landing    | Offers   | Sequences| P&L | Who  | Performance      │
-│          | pages      | + prices |          |      |      | Goals           │
-└─────────────────────────────────────────────────────────────────────────────┘
-```
+**For Bow-Tie Funnel:** See `references/bowtie-funnel.md` for complete XML patterns and grid structure.
+
+> ⚠️ **CRITICAL:** Bow-Tie is a 7-COLUMN GRID, not a flowchart. Each activity = separate rectangle.
 
 Standard dimensions:
 - Page width: ~1300px
-- Bow-Tie section: y=40, height ~150px
-- Business Map section: y=220, height ~400px
+- Bow-Tie section: y=40, height ~350px (includes phase banners, headers, activity boxes, metrics)
+- Business Map section: y=420, height ~400px
 - Column headers: 100-150px wide, 30px tall
 - Content boxes: 100px wide, 40-50px tall
 - Start x: 40
