@@ -17,33 +17,61 @@ Transform your business into clear visual diagrams that reveal bottlenecks, auto
 
 ---
 
-## Quick Start
+## Quick Start (Workshop Setup)
 
-### Option 1: GitHub Codespaces (Recommended for Beginners)
+**Get your own copy in 5 steps - no coding required.**
 
-**No setup required. Start in 2 minutes.**
+### Step 1: Create a GitHub Account
 
-**Prerequisites:** A free [GitHub account](https://github.com/signup). That's it - no need to create your own repository.
+Go to [github.com/signup](https://github.com/signup) and create a free account.
 
-**To try it out (read-only):**
-1. Click the green **"Code"** button above
-2. Select **"Open with Codespaces"** → **"New codespace"**
-3. Wait for the environment to load (~1 min)
-4. Install the **Claude Code extension** from the Extensions panel
-5. Connect your Claude account when prompted
-6. Say: **"Let's do a business x-ray"**
+### Step 2: Fork This Repository
 
-**To save your diagrams permanently:**
-1. First, click **"Fork"** (top right) to create your own copy
-2. Then open Codespaces from YOUR fork
-3. Your diagrams will save to your fork's `diagrams/` folder
-4. Commit changes: Claude will offer to commit, or use `git push`
+1. Click the **"Fork"** button (top right of this page)
+2. On the next screen, click **"Create fork"**
+3. Done! You now have your own copy at `github.com/YOUR-USERNAME/business-x-ray`
 
-> **Why fork?** Codespaces on my repo is read-only for you. Forking gives you your own copy where diagrams persist. You can also download `.drawio` files directly without forking.
+> **What's a fork?** It creates your own copy of this project on GitHub. Your diagrams save here, and you can get my updates anytime.
 
-### Option 2: Install as Plugin (Recommended for Existing Claude Code Users)
+### Step 3: Open in Codespaces
 
-**Get automatic updates when new features are released.**
+1. Go to YOUR fork (should be on your screen after Step 2)
+2. Click the green **"Code"** button
+3. Select **"Codespaces"** tab → **"Create codespace on master"**
+4. Wait ~1 minute for it to load
+
+### Step 4: Install Claude Code
+
+1. In Codespaces, click the **Extensions** icon (left sidebar, looks like 4 squares)
+2. Search for **"Claude Code"**
+3. Click **Install**
+4. Click **"Sign in"** when prompted and connect your Claude account
+
+### Step 5: Run the Skill
+
+In the Claude Code chat, type:
+
+```
+Let's do a business x-ray
+```
+
+That's it! Claude will guide you through mapping your business.
+
+---
+
+## Getting Updates
+
+When I release improvements, you'll see a banner on your fork saying **"This branch is X commits behind"**.
+
+1. Go to your fork on GitHub
+2. Click **"Sync fork"** → **"Update branch"**
+3. Next time you open Codespaces, you'll have the latest version
+
+---
+
+## Alternative: Plugin Install (For Existing Claude Code Users)
+
+If you already have Claude Code installed locally:
 
 ```bash
 claude plugins install https://github.com/the2hourclo/business-x-ray
@@ -51,19 +79,7 @@ claude plugins install https://github.com/the2hourclo/business-x-ray
 
 Then just say: **"Let's do a business x-ray"**
 
-The plugin syncs with this repo - when I push updates, you get them automatically.
-
-### Option 3: Clone the Repo (For Customization)
-
-**Best if you want to modify the skill or contribute.**
-
-```bash
-git clone https://github.com/the2hourclo/business-x-ray.git
-cd business-x-ray
-claude "Let's do a business x-ray"
-```
-
-To get updates: `git pull origin master`
+Plugin auto-updates when I push changes.
 
 ---
 
@@ -209,62 +225,6 @@ Claude Code will:
 - Generate .drawio files directly in `diagrams/`
 - Track progress automatically
 - Use sub-agents for efficient diagram generation
-
----
-
-## Install as Claude Plugin
-
-You can install Business X-Ray as a permanent skill in Claude Code so it's always available.
-
-### Option 1: Install from GitHub (Recommended)
-
-```bash
-# Install directly from GitHub
-claude plugins install https://github.com/the2hourclo/business-x-ray
-```
-
-The skill will be available in all your Claude Code sessions.
-
-### Option 2: Install from Local Clone
-
-```bash
-# Clone the repo first
-git clone https://github.com/the2hourclo/business-x-ray.git
-
-# Install from local directory
-claude plugins install ./business-x-ray
-```
-
-### Verify Installation
-
-```bash
-# List installed plugins
-claude plugins list
-```
-
-You should see `business-x-ray` in the list.
-
-### Using the Plugin
-
-Once installed, just say:
-
-```
-Let's do a business x-ray
-```
-
-Or any of these trigger phrases:
-- "Map my business"
-- "Identify bottlenecks"
-- "Visualize my business"
-- "Process improvement"
-
-Claude will automatically load the skill and guide you through the interview.
-
-### Uninstall
-
-```bash
-claude plugins uninstall business-x-ray
-```
 
 ---
 
