@@ -175,6 +175,62 @@ Claude Code will:
 
 ---
 
+## Install as Claude Plugin
+
+You can install Business X-Ray as a permanent skill in Claude Code so it's always available.
+
+### Option 1: Install from GitHub (Recommended)
+
+```bash
+# Install directly from GitHub
+claude plugins install https://github.com/the2hourclo/business-x-ray
+```
+
+The skill will be available in all your Claude Code sessions.
+
+### Option 2: Install from Local Clone
+
+```bash
+# Clone the repo first
+git clone https://github.com/the2hourclo/business-x-ray.git
+
+# Install from local directory
+claude plugins install ./business-x-ray
+```
+
+### Verify Installation
+
+```bash
+# List installed plugins
+claude plugins list
+```
+
+You should see `business-x-ray` in the list.
+
+### Using the Plugin
+
+Once installed, just say:
+
+```
+Let's do a business x-ray
+```
+
+Or any of these trigger phrases:
+- "Map my business"
+- "Identify bottlenecks"
+- "Visualize my business"
+- "Process improvement"
+
+Claude will automatically load the skill and guide you through the interview.
+
+### Uninstall
+
+```bash
+claude plugins uninstall business-x-ray
+```
+
+---
+
 ## Business Types Supported
 
 | Type | Typical Flow |
