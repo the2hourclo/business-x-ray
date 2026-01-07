@@ -61,11 +61,14 @@ That's it! Claude will guide you through mapping your business.
 
 ## Getting Updates
 
-When I release improvements, you'll see a banner on your fork saying **"This branch is X commits behind"**.
+When I release improvements, here's how to get them:
 
-1. Go to your fork on GitHub
-2. Click **"Sync fork"** → **"Update branch"**
-3. Next time you open Codespaces, you'll have the latest version
+1. Go to your fork on GitHub (`github.com/YOUR-USERNAME/business-x-ray`)
+2. You'll see a banner: **"This branch is X commits behind the2hourclo:master"**
+3. Click **"Sync fork"** → **"Update branch"**
+4. Next time you open Codespaces, you'll have the latest version
+
+> **Will this overwrite my diagrams?** No! Sync Fork only updates the skill files I changed. Your diagrams in the `diagrams/` folder are yours and won't be touched.
 
 ---
 
