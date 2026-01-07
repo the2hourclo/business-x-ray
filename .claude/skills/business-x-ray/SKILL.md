@@ -11,13 +11,16 @@ description: Map, diagnose, and optimize business operations through progressive
 >
 > **EVERY time you need to generate or update a diagram:**
 > ```
-> Use the Task tool with subagent_type="general-purpose":
+> Use the Task tool with subagent_type="general-purpose" and model="haiku":
 > "Generate [diagram type] .drawio. Data: [business data].
 > Read references/drawio-standards.md for XML patterns.
 > Save to: diagrams/[business-name]-x-ray.drawio"
 > ```
 >
 > **Do NOT generate diagram XML inline in this conversation.**
+>
+> **No sub-agents available?** (Claude Web App, ChatGPT, Gemini, Codex)
+> Generate XML inline and provide copy-paste instructions for diagrams.net.
 
 **Map, diagnose, and optimize business operations through progressive visual analysis.**
 
@@ -192,6 +195,7 @@ Orchestrator (this conversation)
 
     Task tool call:
     - subagent_type: "general-purpose"
+    - model: "haiku"  ← Token-efficient for mechanical XML generation
     - prompt: "Generate .drawio XML for [specific diagram]
                Data: [extracted business data]
                Template: read references/drawio-standards.md
@@ -261,11 +265,11 @@ File: diagrams/[business-name]-x-ray.drawio
 ## Cross-Platform Mode
 
 ### Claude Code CLI
-- **Use sub-agents** for diagram generation (keeps orchestrator clean)
+- **Use sub-agents with model="haiku"** for diagram generation (keeps orchestrator clean, saves tokens)
 - Save .drawio directly to `diagrams/` folder
 - Resume by reading local file
 
-### Claude Web App / ChatGPT
+### Claude Web App / ChatGPT / Gemini / Codex
 - Sub-agents not available - generate XML inline
 - Output XML for user to copy-paste into diagrams.net
 - Resume via YAML progress block

@@ -23,6 +23,9 @@ Transform your business into clear visual diagrams that reveal bottlenecks, auto
 
 **No setup required. Start in 2 minutes.**
 
+**Prerequisites:** A free [GitHub account](https://github.com/signup). That's it - no need to create your own repository.
+
+**To try it out (read-only):**
 1. Click the green **"Code"** button above
 2. Select **"Open with Codespaces"** → **"New codespace"**
 3. Wait for the environment to load (~1 min)
@@ -30,7 +33,13 @@ Transform your business into clear visual diagrams that reveal bottlenecks, auto
 5. Connect your Claude account when prompted
 6. Say: **"Let's do a business x-ray"**
 
-> Codespaces gives you a full development environment in your browser with Claude Code pre-configured.
+**To save your diagrams permanently:**
+1. First, click **"Fork"** (top right) to create your own copy
+2. Then open Codespaces from YOUR fork
+3. Your diagrams will save to your fork's `diagrams/` folder
+4. Commit changes: Claude will offer to commit, or use `git push`
+
+> **Why fork?** Codespaces on my repo is read-only for you. Forking gives you your own copy where diagrams persist. You can also download `.drawio` files directly without forking.
 
 ### Option 2: Install as Plugin (Recommended for Existing Claude Code Users)
 
