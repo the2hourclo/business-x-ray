@@ -17,28 +17,56 @@ Transform your business into clear visual diagrams that reveal bottlenecks, auto
 
 ---
 
-## Quick Start (Claude Web App)
+## Quick Start
 
-### Step 1: Duplicate This Repo
+### Option 1: GitHub Codespaces (Recommended for Beginners)
 
-Click **"Use this template"** or **Fork** this repository to your GitHub account.
+**No setup required. Start in 2 minutes.**
 
-### Step 2: Connect to Draw.io
+1. Click the green **"Code"** button above
+2. Select **"Open with Codespaces"** → **"New codespace"**
+3. Wait for the environment to load (~1 min)
+4. Install the **Claude Code extension** from the Extensions panel
+5. Connect your Claude account when prompted
+6. Say: **"Let's do a business x-ray"**
+
+> Codespaces gives you a full development environment in your browser with Claude Code pre-configured.
+
+### Option 2: Install as Plugin (Recommended for Existing Claude Code Users)
+
+**Get automatic updates when new features are released.**
+
+```bash
+claude plugins install https://github.com/the2hourclo/business-x-ray
+```
+
+Then just say: **"Let's do a business x-ray"**
+
+The plugin syncs with this repo - when I push updates, you get them automatically.
+
+### Option 3: Clone the Repo (For Customization)
+
+**Best if you want to modify the skill or contribute.**
+
+```bash
+git clone https://github.com/the2hourclo/business-x-ray.git
+cd business-x-ray
+claude "Let's do a business x-ray"
+```
+
+To get updates: `git pull origin master`
+
+---
+
+## Connect Draw.io to GitHub
+
+Your diagrams save to the `diagrams/` folder. Sync them with Draw.io:
 
 1. Go to [app.diagrams.net](https://app.diagrams.net)
 2. Click **File → Open from → GitHub**
 3. Authorize with your GitHub account
 4. Select this repository
 5. Your diagrams will sync automatically!
-
-### Step 3: Start Your X-Ray
-
-1. Go to [claude.ai](https://claude.ai)
-2. Start a new conversation
-3. Upload the `.claude/skills/business-x-ray.zip` file (or copy the SKILL.md content)
-4. Say: **"Let's do a business x-ray"**
-
-Claude will guide you through the interview process and generate diagrams you can paste into Draw.io.
 
 ---
 
