@@ -14,8 +14,12 @@ Use these as starting points - adjust based on user's actual process during expa
 
 1. **Give every box a unique ID** - `id="step-1"`, `id="step-2"`, etc.
 2. **Connect with arrows** - `source="step-1" target="step-2"`
-3. **Arrows parent to root** - `parent="1"` (not to lanes)
+3. **Arrow parenting:**
+   - **Same-lane arrows** → `parent="1"` (root)
+   - **Cross-lane arrows** → `parent="pool-id"` (the pool, NOT root)
 4. **Arrows are edges** - `edge="1"` attribute required
+
+> **Why cross-lane arrows parent to pool:** Shapes inside lanes have coordinates relative to their lane. The pool is the common ancestor, so arrows parented to the pool correctly resolve coordinates for shapes in different lanes.
 
 ### ID Naming
 
@@ -69,21 +73,21 @@ Use these as starting points - adjust based on user's actual process during expa
     <mxGeometry x="400" y="25" width="100" height="50" as="geometry"/>
 </mxCell>
 
-<!-- ARROW 1: Step 1 → Step 2 -->
-<mxCell id="example-arrow-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;strokeWidth=2;" edge="1" parent="1" source="example-step-1" target="example-step-2">
+<!-- ARROW 1: Step 1 → Step 2 (CROSS-LANE: Owner → AI) -->
+<mxCell id="example-arrow-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;strokeWidth=2;" edge="1" parent="example-pool" source="example-step-1" target="example-step-2">
     <mxGeometry relative="1" as="geometry"/>
 </mxCell>
 
-<!-- ARROW 2: Step 2 → Step 3 -->
-<mxCell id="example-arrow-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;strokeWidth=2;" edge="1" parent="1" source="example-step-2" target="example-step-3">
+<!-- ARROW 2: Step 2 → Step 3 (CROSS-LANE: AI → Owner) -->
+<mxCell id="example-arrow-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;strokeWidth=2;" edge="1" parent="example-pool" source="example-step-2" target="example-step-3">
     <mxGeometry relative="1" as="geometry"/>
 </mxCell>
 ```
 
 **Key observations:**
 - Steps parent to their lane (`parent="example-lane-owner"`)
-- Arrows parent to root (`parent="1"`)
-- Arrows reference step IDs (`source="example-step-1" target="example-step-2"`)
+- **Cross-lane arrows parent to pool** (`parent="example-pool"`)
+- Same-lane arrows can use `parent="1"` (root)
 - X positions: 100 → 250 → 400 (increments of 150)
 
 ---
