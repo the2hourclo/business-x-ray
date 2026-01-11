@@ -243,12 +243,21 @@ Save to: diagrams/[business-name]-x-ray.drawio
 **Process Swimlane (Page 2+):**
 ```
 Add [Process Name] page to existing .drawio file:
+
+CRITICAL - ARROW CONNECTION PATTERN:
+- Every box MUST have a unique ID (e.g., step-1, step-2)
+- Every arrow MUST have source and target matching those IDs
+- Copy the connection pattern exactly from references/swimlane-templates.md
+
+STRUCTURE:
 - Level 1: Process Flow with actor lanes (Owner | AI | Team | Output)
 - Phases: [list of phases with actor assignments]
 - Level 2 (if expanded): System Detail - which systems handle the phase
 - Level 3 (case-by-case): Execution Detail - how the system works (with tool names)
 - Apply annotations: [bottleneck/automate/high-value markers]
-Read references/drawio-standards.md for XML patterns.
+
+Read references/swimlane-templates.md for CONNECTION RULES and working example.
+Read references/drawio-standards.md for colors and styles.
 File: diagrams/[business-name]-x-ray.drawio
 ```
 

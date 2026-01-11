@@ -6,12 +6,97 @@ Use these as starting points - adjust based on user's actual process during expa
 
 ---
 
-## How to Use
+## CONNECTION RULES (CRITICAL)
 
-1. Identify which template matches user's process
-2. Present template as inference: "Based on what you described, here's the typical flow..."
-3. User confirms or adjusts
-4. Generate swimlane using the confirmed structure
+> **Every box needs an ID. Every arrow needs source and target matching those IDs.**
+
+### The Pattern
+
+1. **Give every box a unique ID** - `id="step-1"`, `id="step-2"`, etc.
+2. **Connect with arrows** - `source="step-1" target="step-2"`
+3. **Arrows parent to root** - `parent="1"` (not to lanes)
+4. **Arrows are edges** - `edge="1"` attribute required
+
+### ID Naming
+
+| Element | Pattern | Example |
+|---------|---------|---------|
+| Pool | `{process}-pool` | `content-pool` |
+| Lane | `{process}-lane-{actor}` | `content-lane-owner` |
+| Step | `{process}-step-{n}` | `content-step-1` |
+| Arrow | `{process}-arrow-{n}` | `content-arrow-1` |
+
+### Positioning Formula
+
+- **X spacing:** First box at x=100, then +150 for each (box=100px + gap=50px)
+- **Y centering:** (lane_height - box_height) / 2 = typically y=25
+- **Pool width:** 100 + (150 × num_steps) + 50
+
+---
+
+## COMPLETE WORKING EXAMPLE
+
+**This shows the exact XML pattern. Copy the structure, change the content.**
+
+```xml
+<!-- POOL -->
+<mxCell id="example-pool" value="Process Name" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;startSize=30;fillColor=#f5f5f5;strokeColor=#666666;fontStyle=1;fontSize=14;" vertex="1" parent="1">
+    <mxGeometry x="40" y="40" width="600" height="200" as="geometry"/>
+</mxCell>
+
+<!-- LANE: Owner -->
+<mxCell id="example-lane-owner" value="Owner" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;startSize=80;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;" vertex="1" parent="example-pool">
+    <mxGeometry x="30" width="570" height="100" as="geometry"/>
+</mxCell>
+
+<!-- LANE: AI -->
+<mxCell id="example-lane-ai" value="AI" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;startSize=80;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;" vertex="1" parent="example-pool">
+    <mxGeometry x="30" y="100" width="570" height="100" as="geometry"/>
+</mxCell>
+
+<!-- STEP 1: In Owner lane -->
+<mxCell id="example-step-1" value="First Step" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=10;" vertex="1" parent="example-lane-owner">
+    <mxGeometry x="100" y="25" width="100" height="50" as="geometry"/>
+</mxCell>
+
+<!-- STEP 2: In AI lane (handoff) -->
+<mxCell id="example-step-2" value="Second Step" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=10;" vertex="1" parent="example-lane-ai">
+    <mxGeometry x="250" y="25" width="100" height="50" as="geometry"/>
+</mxCell>
+
+<!-- STEP 3: Back in Owner lane -->
+<mxCell id="example-step-3" value="Third Step" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=10;" vertex="1" parent="example-lane-owner">
+    <mxGeometry x="400" y="25" width="100" height="50" as="geometry"/>
+</mxCell>
+
+<!-- ARROW 1: Step 1 → Step 2 -->
+<mxCell id="example-arrow-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;strokeWidth=2;" edge="1" parent="1" source="example-step-1" target="example-step-2">
+    <mxGeometry relative="1" as="geometry"/>
+</mxCell>
+
+<!-- ARROW 2: Step 2 → Step 3 -->
+<mxCell id="example-arrow-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;strokeWidth=2;" edge="1" parent="1" source="example-step-2" target="example-step-3">
+    <mxGeometry relative="1" as="geometry"/>
+</mxCell>
+```
+
+**Key observations:**
+- Steps parent to their lane (`parent="example-lane-owner"`)
+- Arrows parent to root (`parent="1"`)
+- Arrows reference step IDs (`source="example-step-1" target="example-step-2"`)
+- X positions: 100 → 250 → 400 (increments of 150)
+
+---
+
+## How to Use Templates Below
+
+1. **Match template** to user's process type
+2. **Present as inference** (ASCII diagram)
+3. **Customize lanes and steps** based on user's actual workflow
+4. **Generate XML** using the connection pattern above
+5. **Apply annotations** after mapping (bottleneck=red, automate=orange)
+
+> **The templates below show CONTENT IDEAS. Apply the CONNECTION RULES above when generating XML.**
 
 ---
 
